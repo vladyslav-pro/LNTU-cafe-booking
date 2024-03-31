@@ -1,0 +1,31 @@
+{
+  "name": "cafe-be",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "cafe-be/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "cafe-be:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "cafe-be:build:development"
+        },
+        "production": {
+          "buildTarget": "cafe-be:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "cafe-be/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}

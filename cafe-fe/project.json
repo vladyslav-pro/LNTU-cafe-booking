@@ -1,0 +1,133 @@
+{
+  "name": "cafe-fe",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "cafe-fe/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/cafe-fe/browser",
+        "index": "cafe-fe/src/index.html",
+        "main": "cafe-fe/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "cafe-fe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["cafe-fe/src/favicon.ico", "cafe-fe/src/assets"],
+        "styles": ["cafe-fe/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "cafe-fe:build:production"
+        },
+        "development": {
+          "buildTarget": "cafe-fe:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "cafe-fe:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "cafe-fe/jest.config.ts"
+      }
+    },
+    "server": {
+      "dependsOn": ["build"],
+      "executor": "@angular-devkit/build-angular:server",
+      "options": {
+        "outputPath": "dist/cafe-fe/server",
+        "main": "cafe-fe/server.ts",
+        "tsConfig": "cafe-fe/tsconfig.server.json",
+        "inlineStyleLanguage": "scss"
+      },
+      "configurations": {
+        "production": {
+          "outputHashing": "media"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "sourceMap": true,
+          "extractLicenses": false,
+          "vendorChunk": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve-ssr": {
+      "executor": "@angular-devkit/build-angular:ssr-dev-server",
+      "configurations": {
+        "development": {
+          "browserTarget": "cafe-fe:build:development",
+          "serverTarget": "cafe-fe:server:development"
+        },
+        "production": {
+          "browserTarget": "cafe-fe:build:production",
+          "serverTarget": "cafe-fe:server:production"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "prerender": {
+      "executor": "@angular-devkit/build-angular:prerender",
+      "options": {
+        "routes": ["/"]
+      },
+      "configurations": {
+        "development": {
+          "browserTarget": "cafe-fe:build:development",
+          "serverTarget": "cafe-fe:server:development"
+        },
+        "production": {
+          "browserTarget": "cafe-fe:build:production",
+          "serverTarget": "cafe-fe:server:production"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}

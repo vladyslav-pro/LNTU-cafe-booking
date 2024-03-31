@@ -1,0 +1,9 @@
+{
+  "name": "cafe-fe-e2e",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "cafe-fe-e2e/src",
+  "implicitDependencies": ["cafe-fe"],
+  "// targets": "to see all targets run: nx show project cafe-fe-e2e --web",
+  "targets": {}
+}
