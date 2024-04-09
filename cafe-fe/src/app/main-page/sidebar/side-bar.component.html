@@ -1,0 +1,51 @@
+<div class="side-bar">
+  <br>
+  <div class="logo">
+    <div class="logo-img">
+      <div class="img-icon">
+        <img ngSrc="../../assets/svg-icons/logo-small.svg" alt="Icon" height="60" width="65">
+      </div>
+
+    </div>
+    <div class="logo-text">
+      <span>луцький національний технічний університет</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <ul>
+<!--      @if (user === "ADMIN") {-->
+        <li routerLinkActive="active">
+          <a routerLink="/active-reservations">
+            <span>Активні бронювання</span>
+            <svg-arrow></svg-arrow>
+          </a>
+        </li>
+<!--      }-->
+
+<!--      @if (user === "USER" ) {-->
+        <li routerLinkActive="active">
+          <a routerLink="/my-data">
+            <span>Мої дані</span>
+            <svg-arrow></svg-arrow>
+          </a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/hall-map">
+            <span>Карта залу</span>
+            <svg-arrow></svg-arrow>
+          </a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/my-reservations">
+            <span>Мої бронювання</span>
+            <svg-arrow></svg-arrow>
+          </a>
+        </li>
+<!--      }-->
+
+    </ul>
+  </div>
+
+  <side-bar-information></side-bar-information>
+</div>
