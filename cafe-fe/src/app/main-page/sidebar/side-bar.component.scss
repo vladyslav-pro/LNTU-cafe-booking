@@ -42,10 +42,27 @@ ul {
       cursor: pointer;
       padding: 20px ;
 
+      mat-icon {
+        font-size: 15px;
+        width: 15px;
+        height: 15px;
+      }
       &:hover, &:focus {
-        background-color: var(--color8);
+        background-color: var(--color6);
+
+        span {
+          font-weight: 500;
+        }
+
+        mat-icon {
+          transform: scale(2);
+        }
       }
     }
 
   }
 }
+
+//.routing-arrow {
+//  font-size: 15px;
+//}

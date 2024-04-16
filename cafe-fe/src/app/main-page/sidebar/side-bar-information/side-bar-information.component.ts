@@ -1,5 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {DatePipe} from "@angular/common";
+import {UserReservationComponent} from "../../../shared/svg/user-reservation/user-reservation.component";
+import {MatIcon} from "@angular/material/icon";
 
 @Component({
   standalone: true,
@@ -8,6 +10,8 @@ import {DatePipe} from "@angular/common";
   styleUrl: 'side-bar-information.component.scss',
   imports: [
     DatePipe,
+    UserReservationComponent,
+    MatIcon,
   ]
 })
 export class SideBarInformationComponent implements OnInit {
@@ -22,7 +26,7 @@ export class SideBarInformationComponent implements OnInit {
   ngOnInit() {
     this.getLocalDate()
   }
-//TO-DO this code will be on server side
+  //TODO this code will be on server side
   private getLocalDate():string {
     const kievDate = new Date().toLocaleDateString('en-US', {
       weekday: 'long',

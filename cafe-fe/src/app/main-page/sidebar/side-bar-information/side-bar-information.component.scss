@@ -6,15 +6,36 @@
   margin-left: 40px;
   margin-top: 60px;
   padding-top: 15px;
+  display: flex;
+  justify-content: center;
 }
 .total-time {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
 
+  .reservation-timer {
+    color: var(--color1);
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    mat-icon {
+      font-size: 35px;
+      width: 32px;
+      height: 35px;
+    }
+  }
+
+
+
   p {
     all: unset;
-    border: 1px solid var(--color1);
-
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
   }
 }
