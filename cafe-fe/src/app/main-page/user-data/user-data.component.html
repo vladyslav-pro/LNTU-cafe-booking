@@ -1,13 +1,27 @@
-<h3>Мої дані</h3>
-<div class="user-data">
+<div class="user-data__header">
+  <p>Мої дані</p>
+</div>
+<div class="user-data__main">
   <div class="data-logo">
-
+      <!--TODO set api for gravatar here-->
   </div>
   <div class="data-information">
-    <div><span>Ім’я</span> <span>{{userData.firstName}}</span></div>
-    <div><span>Прізвище</span> <span>{{userData.lastName}}</span></div>
-    <div><span>Телефон</span> <span>{{userData.phoneNumber}}</span></div>
-    <div><span>E-mail</span> <span>{{userData.email}}</span></div>
+    <div>
+      <span class="data-information__label label-space">Ім’я</span>
+      <span>{{userData.firstName}}</span>
+    </div>
+    <div>
+      <span class="data-information__label label-space">Прізвище</span>
+      <span>{{userData.lastName}}</span>
+    </div>
+    <div>
+      <span class="data-information__label label-space">Телефон</span>
+      <span>{{userData.phoneNumber}}</span>
+    </div>
+    <div>
+      <span class="data-information__label">E-mail</span>
+      <span>{{userData.email}}</span>
+    </div>
   </div>
 
 </div>

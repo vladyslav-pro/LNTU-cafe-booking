@@ -1,4 +1,16 @@
-.user-data {
+.user-data__header {
+  margin-top: 100px; // can be removed later
+  display: flex;
+  justify-content: center;
+
+  p {
+    font-size: 32px;
+    line-height: 22px;
+    font-weight: 700;
+    color: var(--color1);
+  }
+}
+.user-data__main {
   width: 920px;
   height: 560px;
   border-radius: 45px;
@@ -6,23 +18,34 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-margin: 50px 160px;
+  margin: 50px 160px;
+}
 
+.data-logo {
+  width: 280px;
+  height: 280px;
+  border-radius: 45px;
+  background-color: var(--color1);
+}
 
-  .data-logo {
-    width: 280px;
-    height: 280px;
-    border-radius: 45px;
-    background-color: var(--color1);
-  }
+.data-information {
+  width: 400px;
+  height: 280px;
 
-  .data-information {
-    width: 400px;
-    height: 280px;
-    border: 1px solid black;
-
-    div {
-      color: var(--color1);
-    }
+  div {
+    color: var(--color1);
   }
 }
+
+.data-information__label {
+  display: inline-block;
+  width: 115px;
+  text-transform: capitalize;
+}
+
+.label-space {
+  margin-bottom: 68px;
+}
+
+//border: 1px solid black;
+//border-radius: 5px;
