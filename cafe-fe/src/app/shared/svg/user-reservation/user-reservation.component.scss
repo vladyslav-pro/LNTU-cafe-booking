@@ -1,5 +1,19 @@
-.some-class  {
+.viewMode  {
   fill: var(--color0);
   width: 250px;
   height: 200px;
 }
+
+.active {
+  fill: var(--color1);
+  width: 250px;
+  height: 200px;
+}
+
+.disabled {
+  fill: var(--color10);
+  width: 250px;
+  height: 200px;
+}
+
+

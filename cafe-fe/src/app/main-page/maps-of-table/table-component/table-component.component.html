@@ -1,1 +1,13 @@
-<p>table-component works!</p>
+<div class="table-component">
+  <div class="table-icon">
+    <user-reservation-icon [active]="active"></user-reservation-icon>
+  </div>
+  <div class="table-number">
+    <span> Столик {{tableInformation.tableNumber}}</span>
+  </div>
+
+  <button mat-flat-button>
+    {{tableState | titlecase}}
+  </button>
+
+</div>

@@ -1,1 +1,7 @@
-<p>maps-of-table works!</p>
+<div class="table-maps">
+  @for (item of tableList; track item) {
+    <table-component [tableInformation]="item"></table-component>
+  }
+</div>
+
+

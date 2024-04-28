@@ -1,0 +1,16 @@
+//TODO set correct height after additing avatar
+.table-maps {
+  border: 1px solid red;
+  width: 1200px;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+
+  table-component {
+    margin-top: 150px;
+    height: 380px;
+    display: inline-block;
+  }
+}

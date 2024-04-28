@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {NgOptimizedImage} from "@angular/common";
 import {SideBarComponent} from "./sidebar/side-bar.component";
 import {UserDataComponent} from "./user-data/user-data.component";
+import {MapsOfTableComponent} from "./maps-of-table/maps-of-table.component";
 
 @Component({
   standalone: true,
@@ -10,7 +11,8 @@ import {UserDataComponent} from "./user-data/user-data.component";
   styleUrl: 'main-page.component.scss',
   imports: [
     SideBarComponent,
-    UserDataComponent
+    UserDataComponent,
+    MapsOfTableComponent
   ]
 })
 export class MainPageComponent {

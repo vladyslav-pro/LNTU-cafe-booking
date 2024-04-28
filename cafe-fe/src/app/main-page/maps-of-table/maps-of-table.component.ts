@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {TableComponent} from "./table-component/table-component.component";
+import {TABLE_MOCK} from "../../shared/mocs/table-mock";
 
 @Component({
-  selector: 'app-maps-of-table',
+  selector: 'maps-of-table',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TableComponent],
   templateUrl: './maps-of-table.component.html',
   styleUrl: './maps-of-table.component.scss',
 })
-export class MapsOfTableComponent {}
+export class MapsOfTableComponent {
+  public tableList  = TABLE_MOCK
+}

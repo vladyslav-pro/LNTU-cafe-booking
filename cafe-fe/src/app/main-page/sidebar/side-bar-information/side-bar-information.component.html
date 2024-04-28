@@ -1,5 +1,5 @@
 <div class="side-bar-information">
-  <div class="total-time">
+  <div class="state-of-reservation">
       <div class="reservation-timer" >
        <span>{{userReservationInformation.timeOfReservation}}</span>
         <mat-icon
@@ -17,7 +17,7 @@
     <p style="color: var(--color0); font-weight: 700;">
       {{userReservationInformation.guest}}
     </p>
-    <user-reservation-icon></user-reservation-icon>
+    <user-reservation-icon [viewMode]="viewMode"></user-reservation-icon>
     <p style="color: var(--color0); font-weight: 700; margin-top: 20px">
       {{userReservationInformation.bookedTable}}
     </p>
