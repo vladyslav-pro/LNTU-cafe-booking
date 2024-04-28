@@ -11,18 +11,18 @@ import {BOOKING_ICON} from "../svg-constants";
   styleUrl: './user-reservation.component.scss'
 })
 export class UserReservationComponent {
-  @Input() active?: boolean;
-  @HostBinding('class.active') get activeClass() {
-    return this.active;
-  }
-  @Input() disabled?: boolean;
-  @HostBinding('class.disabled') get disabledClass() {
-    return this.disabled;
-  }
-  @Input() viewMode?: boolean;
-  @HostBinding('class.viewMode') get viewModeClass() {
-    return this.viewMode;
-  }
+  @Input() state?: string;
+  // @HostBinding('class.active') get activeClass() {
+  //   if (this.state === 'ACTIVE') {
+  //     return this.state;
+  //   }
+  // }
+  // @HostBinding('class.disabled') get disabledClass() {
+  //   return this.state;
+  // }
+  // @HostBinding('class.viewMode') get viewModeClass() {
+  //   return this.state;
+  // }
 
   boxSize: IconOptions = {
     viewBox: '0 0 200 200'

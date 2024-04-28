@@ -15,7 +15,7 @@ export class TableComponent implements OnInit{
   @Input() tableInformation!: TableInformation ;
 
   public tableState!:'ЗАБРОНЮВАТИ' | 'ЗАБРОНЬОВАНО' ;
-  public active: boolean = true;
+  public iconState!: string;
 
   constructor() {
   }
@@ -24,13 +24,14 @@ export class TableComponent implements OnInit{
     this.setButtonLabel()
   }
 
-  setButtonLabel():void {
+  private setButtonLabel():void {
     if (this.tableInformation.state) {
-      this.tableState = 'ЗАБРОНЬОВАНО'
+      this.tableState = 'ЗАБРОНЬОВАНО';
+      this.iconState = 'DISABLE';
     } else {
-      this.tableState ='ЗАБРОНЮВАТИ'
+      this.tableState ='ЗАБРОНЮВАТИ';
+      this.iconState = 'ACTIVE';
     }
-
   }
 
 

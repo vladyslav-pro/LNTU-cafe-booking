@@ -2,5 +2,9 @@
   svgIcon="booking-icon"
   aria-hidden="false"
   aria-label="booking icon"
-  [class]="{ 'active': active, 'disabled': disabled, 'viewMode': viewMode }"
+  [class]="{
+    'active': state === 'ACTIVE',
+     'disabled': state === 'DISABLE',
+     'viewMode': state === 'VIEW'
+     }"
 ></mat-icon>

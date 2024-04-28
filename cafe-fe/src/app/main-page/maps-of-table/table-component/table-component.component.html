@@ -1,6 +1,6 @@
-<div class="table-component">
+<div [class]="tableInformation.state ? 'disabled' :  'table-component'">
   <div class="table-icon">
-    <user-reservation-icon [active]="active"></user-reservation-icon>
+    <user-reservation-icon [state]="iconState"></user-reservation-icon>
   </div>
   <div class="table-number">
     <span> Столик {{tableInformation.tableNumber}}</span>
@@ -9,5 +9,4 @@
   <button mat-flat-button>
     {{tableState | titlecase}}
   </button>
-
 </div>

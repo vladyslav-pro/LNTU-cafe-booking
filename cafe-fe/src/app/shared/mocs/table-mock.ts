@@ -47,5 +47,13 @@ export const TABLE_MOCK  = [
     mainUser: 'User 13',
     requestedUser: 'User 14',
     date: '',
+  },
+  {
+    tableNumber: 8,
+    state: true,
+    mainUser: 'User 15',
+    requestedUser: 'User 16',
+    date: '',
   }
+
 ]

@@ -15,7 +15,7 @@ import {MatIcon} from "@angular/material/icon";
   ]
 })
 export class SideBarInformationComponent implements OnInit {
-  public viewMode: boolean = true
+  public viewMode: string = 'VIEW'
   public userReservationInformation = {
     timeOfReservation: '1 hour. 20 min. 30 sec.',
     date: new Date(),
