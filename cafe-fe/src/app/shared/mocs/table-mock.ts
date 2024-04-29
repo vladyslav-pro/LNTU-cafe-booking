@@ -1,4 +1,6 @@
-export const TABLE_MOCK  = [
+import {TableInformation} from "../interfaces/table-interface";
+
+export const TABLE_MOCK: TableInformation[]  = [
   {
     tableNumber: 1,
     state: false,

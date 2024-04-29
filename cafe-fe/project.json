@@ -49,6 +49,10 @@
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "open": true,
+        "port": 4200
+      },
       "configurations": {
         "production": {
           "buildTarget": "cafe-fe:build:production"

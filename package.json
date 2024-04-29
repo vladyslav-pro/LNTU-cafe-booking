@@ -2,7 +2,10 @@
   "name": "@lntu-cafe/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start:frontend": "npx nx serve cafe-fe && open http://localhost:4200"
+
+  },
   "private": true,
   "devDependencies": {
     "@angular-devkit/build-angular": "17.3.4",

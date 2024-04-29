@@ -12,10 +12,10 @@ import {TableInformation} from "../../../shared/interfaces/table-interface";
   styleUrl: './table-component.component.scss',
 })
 export class TableComponent implements OnInit{
-  @Input() tableInformation!: TableInformation ;
+  @Input() tableInformation: TableInformation | undefined ;
 
-  public tableState!:'ЗАБРОНЮВАТИ' | 'ЗАБРОНЬОВАНО' ;
-  public iconState!: string;
+  public tableState:'ЗАБРОНЮВАТИ' | 'ЗАБРОНЬОВАНО' = 'ЗАБРОНЮВАТИ';
+  public iconState: string = '';
 
   constructor() {
   }
@@ -25,7 +25,7 @@ export class TableComponent implements OnInit{
   }
 
   private setButtonLabel():void {
-    if (this.tableInformation.state) {
+    if (this.tableInformation?.state) {
       this.tableState = 'ЗАБРОНЬОВАНО';
       this.iconState = 'DISABLE';
     } else {
