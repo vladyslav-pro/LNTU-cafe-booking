@@ -1,8 +1,24 @@
-<div class="table-maps">
-<!--  TODO add search for table number -->
-  @for (item of tableList; track item) {
-    <table-component [tableInformation]="item"></table-component>
-  }
+<div class="table-map">
+  <h1 class="table-map__header">Карта залу</h1>
+  <div class="table-map__search">
+    <mat-form-field appearance="outline">
+      <mat-label>Пошук</mat-label>
+      <input matInput placeholder="Введіть номер столу ">
+      <mat-icon matPrefix fontIcon="search"></mat-icon>
+      <button mat-icon-button aria-label="clear" matSuffix>
+        <mat-icon fontIcon="clear"></mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+
+  <div class="table-map__list">
+    @for (item of tableList; track item) {
+      <!--    <ul>-->
+      <table-item-component [tableInformation]="item"></table-item-component>
+      <!--    </ul>-->
+    }
+  </div>
 </div>
+
 
 

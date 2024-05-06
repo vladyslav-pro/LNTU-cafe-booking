@@ -1,4 +1,4 @@
-.side-bar-information {
+.side-bar__information {
   width: 285px;
   height: 480px;
   background-color: var(--color4);
@@ -9,12 +9,12 @@
   display: flex;
   justify-content: center;
 }
-.state-of-reservation {
+.side-bar__state {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
 
-  .reservation-timer {
+  .side-bar__reservation-timer {
     color: var(--color1);
     font-weight: 400;
     font-size: 20px;

@@ -5,11 +5,11 @@ import {MatButtonModule} from "@angular/material/button";
 import {TableInformation} from "../../../shared/interfaces/table-interface";
 
 @Component({
-  selector: 'table-component',
+  selector: 'table-item-component',
   standalone: true,
   imports: [CommonModule, UserReservationComponent, MatButtonModule],
-  templateUrl: './table-component.component.html',
-  styleUrl: './table-component.component.scss',
+  templateUrl: './table-item-component.component.html',
+  styleUrl: './table-item-component.component.scss',
 })
 export class TableComponent implements OnInit{
   @Input() tableInformation: TableInformation | undefined ;

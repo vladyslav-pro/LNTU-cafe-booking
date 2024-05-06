@@ -1,4 +1,4 @@
-.table-component {
+.table-item__enabled {
   width: 300px;
   height: 380px;
   border-radius: 45px;
@@ -18,12 +18,12 @@
   }
 }
 
-.table-icon {
+.table-item__icon {
   margin-top: 30px;
   display: flex;
 }
 
-.table-number {
+.table-item__number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@
   line-height: 20px;
 }
 
-.disabled {
+.table-item__disabled {
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
