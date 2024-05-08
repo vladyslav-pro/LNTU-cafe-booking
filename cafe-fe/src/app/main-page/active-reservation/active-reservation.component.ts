@@ -1,12 +1,57 @@
-import { Component } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {ActiveReservationItemComponent} from "./active-reservation-item/active-reservation-item.component";
+import {MatFormField, MatLabel, MatPrefix, MatSuffix} from "@angular/material/form-field";
+import {MatIcon} from "@angular/material/icon";
+import {MatInput} from "@angular/material/input";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {TABLE_MOCK} from "../../shared/mocs/table-mock";
+import {CommonModule} from "@angular/common";
+import {TableInformation} from "../../shared/interfaces/table-interface";
 
 @Component({
-  selector: 'app-active-reservation',
+  selector: 'active-reservation',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ActiveReservationItemComponent,
+    MatFormField,
+    MatIcon,
+    MatInput,
+    MatLabel,
+    MatPrefix,
+    MatSuffix,
+    ReactiveFormsModule
+  ],
   templateUrl: './active-reservation.component.html',
-  styleUrl: './active-reservation.component.scss'
+  styleUrl: './active-reservation.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
-export class ActiveReservationComponent {
+export class ActiveReservationComponent implements OnInit {
+  // TODO for the future? this array return from server to Administrative user
+  public tableNumber:string ='';
+  protected readonly tableList = TABLE_MOCK;
 
+  public activeTable: TableInformation[] = [];
+
+  ngOnInit() {
+    this.getBookedTable();
+  }
+
+  public getTableNumber(event: any) {
+    console.log(event.data)
+    console.log(this.tableNumber)
+  }
+
+  public onSearchClean() {
+    this.tableNumber = ''
+  }
+
+  private getBookedTable(): void {
+    this.tableList.map((item:TableInformation) => {
+      if (item.state) {
+        this.activeTable.push(item)
+      }
+    })
+  }
 }

@@ -1,7 +1,10 @@
 export interface TableInformation {
   tableNumber: number;
   state: boolean;
-  mainUser: string
+  mainUser: string;
+  mainUserState?: string ;
   requestedUser: string;
-  date: string;
+  requestedUserState?:string;
+  dateOfBooking: string;
+  bookedPeriod?: string;
 }

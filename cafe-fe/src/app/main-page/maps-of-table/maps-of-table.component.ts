@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, EventEmitter, OnChanges, SimpleChanges, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TableComponent} from "./table-component/table-item-component.component";
 import {TABLE_MOCK} from "../../shared/mocs/table-mock";
@@ -11,11 +11,29 @@ import {MatInputModule} from "@angular/material/input";
 @Component({
   selector: 'maps-of-table',
   standalone: true,
-  imports: [CommonModule, TableComponent, FormsModule,MatFormFieldModule,MatInputModule, MatFormField, MatIcon],
+  imports: [
+    CommonModule,
+    TableComponent,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatFormField,
+    MatIcon
+  ],
   templateUrl: './maps-of-table.component.html',
   styleUrl: './maps-of-table.component.scss',
 })
 export class MapsOfTableComponent {
+  // TODO add table filtering ask server about this I think
   public tableList:TableInformation[]  = TABLE_MOCK;
-  public searchTerm: string = '';
+  public tableNumber:string ='';
+
+  public getTableNumber(event: any) {
+    console.log(event.data)
+    console.log(this.tableNumber)
+  }
+
+  public onSearchClean() {
+    this.tableNumber = ''
+  }
 }

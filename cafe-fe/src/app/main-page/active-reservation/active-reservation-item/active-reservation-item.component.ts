@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {UserReservationComponent} from "../../../shared/svg/user-reservation/user-reservation.component";
+import {TableInformation} from "../../../shared/interfaces/table-interface";
+import {TitleCasePipe} from "@angular/common";
 
 @Component({
-  selector: 'app-active-reservation-item',
+  selector: 'active-reservation-item',
   standalone: true,
-  imports: [],
+  imports: [
+    UserReservationComponent,
+    TitleCasePipe
+  ],
   templateUrl: './active-reservation-item.component.html',
   styleUrl: './active-reservation-item.component.scss'
 })
 export class ActiveReservationItemComponent {
+  @Input() tableItem: TableInformation | undefined ;
 
+  iconState = 'ACTIVE'
 }

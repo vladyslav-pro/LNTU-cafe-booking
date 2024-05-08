@@ -3,6 +3,10 @@ import {NgOptimizedImage} from "@angular/common";
 import {SideBarComponent} from "./sidebar/side-bar.component";
 import {UserDataComponent} from "./user-data/user-data.component";
 import {MapsOfTableComponent} from "./maps-of-table/maps-of-table.component";
+import {MatSidenavContainer, MatSidenavModule} from "@angular/material/sidenav";
+import {FormControl} from "@angular/forms";
+import {MatButtonModule} from "@angular/material/button";
+import {ActiveReservationComponent} from "./active-reservation/active-reservation.component";
 
 @Component({
   standalone: true,
@@ -12,7 +16,11 @@ import {MapsOfTableComponent} from "./maps-of-table/maps-of-table.component";
   imports: [
     SideBarComponent,
     UserDataComponent,
-    MapsOfTableComponent
+    MapsOfTableComponent,
+    MatSidenavContainer,
+    MatSidenavModule,
+    MatButtonModule,
+    ActiveReservationComponent
   ]
 })
 export class MainPageComponent {
