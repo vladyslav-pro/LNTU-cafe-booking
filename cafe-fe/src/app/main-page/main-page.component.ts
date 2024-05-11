@@ -7,6 +7,7 @@ import {MatSidenavContainer, MatSidenavModule} from "@angular/material/sidenav";
 import {FormControl} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {ActiveReservationComponent} from "./active-reservation/active-reservation.component";
+import {MyReservationComponent} from "./my-reservation/my-reservation.component";
 
 @Component({
   standalone: true,
@@ -20,7 +21,8 @@ import {ActiveReservationComponent} from "./active-reservation/active-reservatio
     MatSidenavContainer,
     MatSidenavModule,
     MatButtonModule,
-    ActiveReservationComponent
+    ActiveReservationComponent,
+    MyReservationComponent
   ]
 })
 export class MainPageComponent {

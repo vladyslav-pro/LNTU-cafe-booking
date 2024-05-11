@@ -13,9 +13,15 @@
       <span>  {{tableItem?.mainUser}}</span>
     </div>
     <div class="active-reservation-item__information__requested-user general-item-style">
-      <span>  {{tableItem?.requestedUserState}}</span>
+      <span>  {{tableItem?.requestedUserPosition}}</span>
       <span> {{tableItem?.requestedUser}}</span>
     </div>
-    <button mat-button class="active-reservation-item__button"> Скасувати зустріч</button>
+    @if (userAsAdmin) {
+      <button mat-button class="active-reservation-item__button">Скасувати зустріч</button>
+    }
+    @else if (userAsUSer) {
+      <button mat-button class="active-reservation-item__button">{{tableItem?.requestedUserState || 'pending'}}</button>
+    }
+
   </div>
 </div>

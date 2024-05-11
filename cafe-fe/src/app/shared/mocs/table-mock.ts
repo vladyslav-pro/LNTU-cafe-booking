@@ -7,7 +7,7 @@ export const TABLE_MOCK: TableInformation[]  = [
     mainUser: 'User 1',
     mainUserState: 'Student',
     requestedUser: 'User 2',
-    requestedUserState: 'Student',
+    requestedUserPosition: 'Student',
     dateOfBooking: '',
   },
   {
@@ -16,7 +16,8 @@ export const TABLE_MOCK: TableInformation[]  = [
     mainUser: 'User 3',
     mainUserState: 'Student',
     requestedUser: 'User 4',
-    requestedUserState: 'Teacher',
+    requestedUserPosition: 'Teacher',
+    requestedUserState: 'ACCEPTED',
     dateOfBooking: '',
   },
   {
@@ -25,7 +26,7 @@ export const TABLE_MOCK: TableInformation[]  = [
     mainUser: 'User 5',
     mainUserState: 'Teacher',
     requestedUser: 'User 6',
-    requestedUserState: 'Teacher',
+    requestedUserPosition: 'Teacher',
     dateOfBooking: '',
   },
   {
@@ -34,7 +35,8 @@ export const TABLE_MOCK: TableInformation[]  = [
     mainUser: 'User 7',
     mainUserState: 'Student',
     requestedUser: 'User 8',
-    requestedUserState: 'Student',
+    requestedUserPosition: 'Student',
+    requestedUserState: 'PENDING',
     dateOfBooking: '',
   },
   {
@@ -43,7 +45,7 @@ export const TABLE_MOCK: TableInformation[]  = [
     mainUser: 'User 9',
     mainUserState: 'Student',
     requestedUser: 'User 10',
-    requestedUserState: 'Teacher',
+    requestedUserPosition: 'Teacher',
     dateOfBooking: '',
   },
   {
@@ -52,7 +54,7 @@ export const TABLE_MOCK: TableInformation[]  = [
     mainUser: 'User 11',
     mainUserState: 'Teacher',
     requestedUser: 'User 12',
-    requestedUserState: 'Teacher',
+    requestedUserPosition: 'Teacher',
     dateOfBooking: '',
   },
   {
@@ -61,7 +63,8 @@ export const TABLE_MOCK: TableInformation[]  = [
     mainUser: 'User 13',
     mainUserState: 'Teacher',
     requestedUser: 'User 14',
-    requestedUserState: 'Student',
+    requestedUserPosition: 'Student',
+    requestedUserState: 'ACCEPTED',
     dateOfBooking: '',
   },
   {
@@ -70,7 +73,8 @@ export const TABLE_MOCK: TableInformation[]  = [
     mainUser: 'User 15',
     mainUserState: 'Student',
     requestedUser: 'User 16',
-    requestedUserState: 'Teacher',
+    requestedUserPosition: 'Teacher',
+    requestedUserState: 'PENDING',
     dateOfBooking: '',
   }
 

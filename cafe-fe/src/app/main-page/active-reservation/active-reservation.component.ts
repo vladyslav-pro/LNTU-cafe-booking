@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ActiveReservationItemComponent} from "./active-reservation-item/active-reservation-item.component";
+import {ReservationItemComponent} from "../../shared/components/active-reservation-item/reservation-item.component";
 import {MatFormField, MatLabel, MatPrefix, MatSuffix} from "@angular/material/form-field";
 import {MatIcon} from "@angular/material/icon";
 import {MatInput} from "@angular/material/input";
@@ -14,7 +14,7 @@ import {TableInformation} from "../../shared/interfaces/table-interface";
   imports: [
     CommonModule,
     FormsModule,
-    ActiveReservationItemComponent,
+    ReservationItemComponent,
     MatFormField,
     MatIcon,
     MatInput,
@@ -31,6 +31,7 @@ export class ActiveReservationComponent implements OnInit {
   // TODO for the future? this array return from server to Administrative user
   public tableNumber:string ='';
   protected readonly tableList = TABLE_MOCK;
+  public userAdmin: boolean = true;
 
   public activeTable: TableInformation[] = [];
 
