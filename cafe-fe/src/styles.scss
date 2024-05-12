@@ -37,8 +37,12 @@ $cafe-fe-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-  font-family: "Roboto Regular";
+  font-family: "Roboto Bold";
   src: url("./assets/font/Roboto-Bold.ttf") format('truetype');
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("./assets/font/Roboto-Light.ttf") format('truetype');
 }
 
 :root {

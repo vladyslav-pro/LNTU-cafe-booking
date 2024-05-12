@@ -33,7 +33,7 @@ export class UserReservationComponent {
       private sanitizer: DomSanitizer,
   ) {
 
-    iconRegistry.addSvgIconLiteral('booking-icon', sanitizer.bypassSecurityTrustHtml(BOOKING_ICON), this.boxSize);
+    iconRegistry.addSvgIconLiteral('reservation-icon', sanitizer.bypassSecurityTrustHtml(BOOKING_ICON), this.boxSize);
   }
 
 }
