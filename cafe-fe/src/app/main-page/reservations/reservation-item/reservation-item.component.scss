@@ -29,6 +29,7 @@
   span {
     font-weight: 700;
     font-size: 17px;
+    font-family: "Roboto Bold";
   }
 }
 
@@ -39,6 +40,18 @@
   display: flex;
   flex-direction: column;
 
+}
+
+.reservation-item__information__text {
+  font-family: "Roboto Regular";
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.reservation-item__information__date-date {
+  font-family: "Roboto Bold";
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .general-item-style {
@@ -100,8 +113,7 @@
   align-items: center;
 }
 
-.reservation-item__button-cancel {
-  all: unset;
+.reservation-item__button {
   width: 160px;
   height: 50px;
   border-radius: 15px;
@@ -115,3 +127,8 @@
   align-items: center;
 }
 
+:host {
+  .mat-mdc-button:not(:disabled) {
+    color: var(--color0);
+  }
+}

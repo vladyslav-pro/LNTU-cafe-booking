@@ -44,6 +44,10 @@ $cafe-fe-theme: mat.define-light-theme((
   font-family: "Roboto Light";
   src: url("./assets/font/Roboto-Light.ttf") format('truetype');
 }
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("./assets/font/Roboto-Regular.ttf") format('truetype');
+}
 
 :root {
   --color0: #FFFFFF;

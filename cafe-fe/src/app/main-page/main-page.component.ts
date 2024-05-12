@@ -8,6 +8,7 @@ import {FormControl} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {ActiveReservationComponent} from "./reservations/active-reservation/active-reservation.component";
 import {MyReservationComponent} from "./reservations/my-reservation/my-reservation.component";
+import {RequestReservationComponent} from "./reservations/request-reservation/request-reservation.component";
 
 @Component({
   standalone: true,
@@ -22,7 +23,8 @@ import {MyReservationComponent} from "./reservations/my-reservation/my-reservati
     MatSidenavModule,
     MatButtonModule,
     ActiveReservationComponent,
-    MyReservationComponent
+    MyReservationComponent,
+    RequestReservationComponent
   ]
 })
 export class MainPageComponent {

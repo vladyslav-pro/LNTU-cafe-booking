@@ -4,28 +4,28 @@ import {TableInformation} from "../../../shared/interfaces/table-interface";
 import {ReservationItemComponent} from "../reservation-item/reservation-item.component";
 
 @Component({
-  selector: 'my-reservation',
+  selector: 'request-reservation',
   standalone: true,
   imports: [
     ReservationItemComponent
   ],
-  templateUrl: './my-reservation.component.html',
-  styleUrl: './my-reservation.component.scss'
+  templateUrl: './request-reservation.component.html',
+  styleUrl: './request-reservation.component.scss'
 })
-export class MyReservationComponent implements OnInit{
+export class RequestReservationComponent implements OnInit{
   protected readonly tableList = TABLE_MOCK;
   public activeTable: TableInformation[] = [];
-  public userAsUSer: boolean = true
-
+  userAsUser: boolean = true;
   ngOnInit() {
     this.getBookedTable();
   }
-
   private getBookedTable(): void {
     this.tableList.map((item:TableInformation) => {
-      if (item.state) {
+      if (item.requestedUserState === 'PENDING') {
         this.activeTable.push(item)
       }
     })
   }
+
+
 }

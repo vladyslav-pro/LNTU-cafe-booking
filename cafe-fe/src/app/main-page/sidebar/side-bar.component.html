@@ -15,7 +15,7 @@
   <div class="nav-bar">
     <ul>
 <!--      @if (user === "ADMIN") {-->
-        <li routerLinkActive="active">
+        <li routerLinkActive="active" matBadge="4" [matBadgeOverlap]="badgeOverlap">
           <a routerLink="/active-reservations">
             <span>Активні бронювання</span>
             <mat-icon
@@ -48,7 +48,7 @@
             </mat-icon>
           </a>
         </li>
-        <li routerLinkActive="active">
+        <li routerLinkActive="active" matBadge="4" [matBadgeOverlap]="badgeOverlap">
           <a routerLink="/my-reservations">
             <span>Мої бронювання</span>
             <mat-icon
@@ -58,7 +58,8 @@
             </mat-icon>
           </a>
         </li>
-      <li routerLinkActive="active">
+
+      <li routerLinkActive="active" [matBadge]="requestReservation" [matBadgeOverlap]="badgeOverlap">
         <a routerLink="/request-reservations">
           <span>Запити бронювання</span>
           <mat-icon

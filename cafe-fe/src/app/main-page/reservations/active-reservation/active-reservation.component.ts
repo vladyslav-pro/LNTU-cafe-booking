@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ReservationItemComponent} from "../../../shared/components/reservation-item/reservation-item.component";
+import {ReservationItemComponent} from "../reservation-item/reservation-item.component";
 import {MatFormField, MatLabel, MatPrefix, MatSuffix} from "@angular/material/form-field";
 import {MatIcon} from "@angular/material/icon";
 import {MatInput} from "@angular/material/input";
