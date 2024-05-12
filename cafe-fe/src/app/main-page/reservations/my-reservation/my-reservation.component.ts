@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {TABLE_MOCK} from "../../shared/mocs/table-mock";
-import {TableInformation} from "../../shared/interfaces/table-interface";
-import {ReservationItemComponent} from "../../shared/components/reservation-item/reservation-item.component";
+import {TABLE_MOCK} from "../../../shared/mocs/table-mock";
+import {TableInformation} from "../../../shared/interfaces/table-interface";
+import {ReservationItemComponent} from "../../../shared/components/reservation-item/reservation-item.component";
 
 @Component({
   selector: 'my-reservation',

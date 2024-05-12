@@ -15,11 +15,24 @@ import {TitleCasePipe} from "@angular/common";
 })
 export class ReservationItemComponent {
   @Input() tableItem: TableInformation | undefined ;
-  //after add server this input will be removed
-  @Input() userAsAdmin: boolean | undefined;
-  @Input() userAsUSer: boolean | undefined;
+  //after add routing server this input will be removed
+  @Input() activeReservationTab: boolean | undefined;
+  @Input() myReservationTab: boolean | undefined;
+  @Input() requestReservationTab: boolean | undefined;
 
     // public userAsAdmin: boolean = true;
 
   public iconState = 'ACTIVE'
+
+  public canselMeeting() {
+
+  }
+
+  public acceptMeeting() {
+
+  }
+
+  public declineMeeting() {
+
+  }
 }

@@ -1,12 +1,12 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ReservationItemComponent} from "../../shared/components/reservation-item/reservation-item.component";
+import {ReservationItemComponent} from "../../../shared/components/reservation-item/reservation-item.component";
 import {MatFormField, MatLabel, MatPrefix, MatSuffix} from "@angular/material/form-field";
 import {MatIcon} from "@angular/material/icon";
 import {MatInput} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {TABLE_MOCK} from "../../shared/mocs/table-mock";
+import {TABLE_MOCK} from "../../../shared/mocs/table-mock";
 import {CommonModule} from "@angular/common";
-import {TableInformation} from "../../shared/interfaces/table-interface";
+import {TableInformation} from "../../../shared/interfaces/table-interface";
 
 @Component({
   selector: 'active-reservation',

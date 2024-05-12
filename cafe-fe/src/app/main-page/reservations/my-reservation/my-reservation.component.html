@@ -3,7 +3,7 @@
 
   <div class="my-reservation__list">
     @for (item of activeTable; track item) {
-      <reservation-item [tableItem]="item" [userAsUSer]="userAsUSer"></reservation-item>
+      <reservation-item [tableItem]="item" [myReservationTab]="userAsUSer"></reservation-item>
     }
   </div>
 
