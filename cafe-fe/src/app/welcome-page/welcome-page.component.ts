@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import {LoginPageComponent} from "./login-page/login-page.component";
+import {RegistrationPageComponent} from "./registration-page/registration-page.component";
 
 @Component({
-  selector: 'app-welcome-page',
+  selector: 'welcome-page',
   standalone: true,
-  imports: [],
+  imports: [
+    LoginPageComponent,
+    RegistrationPageComponent
+  ],
   templateUrl: './welcome-page.component.html',
   styleUrl: './welcome-page.component.scss'
 })
