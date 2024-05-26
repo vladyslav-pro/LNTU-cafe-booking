@@ -6,7 +6,8 @@
     <span> Столик {{tableInformation?.tableNumber}}</span>
   </div>
 
-  <button mat-flat-button>
+  <button mat-flat-button (click)="showReservationDialog()">
     {{tableState | titlecase}}
+<!--    <logo-icon></logo-icon>-->
   </button>
 </li>

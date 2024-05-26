@@ -1,4 +1,25 @@
-<div class="login-page" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-
+<div class="login-page">
+  <div class="login-page__form-group">
+    <h1>Сторінка авторизації користувача</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-page__form">
+      <div class="login-page__form__input">
+        <input  placeholder="lntu.email@com" [formControlName]="'email'" type="email">
+        <input minlength="8" placeholder="type password" [formControlName]="'password'" type="password">
+      </div>
+      <button
+        mat-button
+        type="submit"
+        [disabled]="loginForm.invalid"
+        class="login-page__button"
+      >
+        <span>Вхід</span>
+        <logo-icon></logo-icon>
+      </button>
+    </form>
+    <button mat-button class="login-page__button">
+      <span>Реєстрація</span>
+      <logo-icon></logo-icon>
+    </button>
+  </div>
 </div>
 

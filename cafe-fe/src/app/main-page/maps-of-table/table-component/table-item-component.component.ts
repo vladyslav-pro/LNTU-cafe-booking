@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import {UserReservationComponent} from "../../../shared/svg/user-reservation/user-reservation.component";
 import {MatButtonModule} from "@angular/material/button";
 import {TableInformation} from "../../../shared/interfaces/table-interface";
+import {LogoIconComponent} from "../../../shared/svg/logo-icon/logo-icon.component";
 
 @Component({
   selector: 'table-item-component',
   standalone: true,
-  imports: [CommonModule, UserReservationComponent, MatButtonModule],
+  imports: [CommonModule, UserReservationComponent, MatButtonModule, LogoIconComponent],
   templateUrl: './table-item-component.component.html',
   styleUrl: './table-item-component.component.scss',
 })
@@ -32,6 +33,10 @@ export class TableComponent implements OnInit{
       this.tableState ='ЗАБРОНЮВАТИ';
       this.iconState = 'ACTIVE';
     }
+  }
+
+  public showReservationDialog() {
+
   }
 
 

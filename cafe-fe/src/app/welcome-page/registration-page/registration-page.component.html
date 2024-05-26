@@ -1,1 +1,25 @@
-<p>registration-page works!</p>
+<div class="registration-page">
+  <div class="registration-page__content">
+    <h1>Сторінка реєстрації користувача</h1>
+    @if (userRegistered) {
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="registration-page__form">
+      <input type="text" placeholder="Ім'я" [formControlName]="'firstName'">
+      <input type="text" placeholder="Прізвище" [formControlName]="'lastName'">
+      <input type="email" placeholder="E-mail" [formControlName]="'email'">
+      <input type="password" placeholder="Пароль" [formControlName]="'password'">
+      <input type="phone" placeholder="Телефон" [formControlName]="'phone'">
+        <button
+          mat-button
+          type="submit"
+          [disabled]="registrationForm.invalid"
+        ><span>Реєстрація</span> <logo-icon></logo-icon></button>
+    </form>
+    }
+    @if (!userRegistered) {
+    <div class="registration-page__success">
+      <h2>Ви успішно зареєструвались!</h2>
+      <button mat-button (click)="onLoginReturn()">ПОвернутись на сторінку авторизації</button>
+    </div>
+    }
+  </div>
+</div>

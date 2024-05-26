@@ -22,6 +22,7 @@ import {MatInputModule} from "@angular/material/input";
   ],
   templateUrl: './maps-of-table.component.html',
   styleUrl: './maps-of-table.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class MapsOfTableComponent {
   // TODO add table filtering ask server about this I think
