@@ -1,9 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, inject, Input, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {UserReservationComponent} from "../../../shared/svg/user-reservation/user-reservation.component";
 import {MatButtonModule} from "@angular/material/button";
 import {TableInformation} from "../../../shared/interfaces/table-interface";
 import {LogoIconComponent} from "../../../shared/svg/logo-icon/logo-icon.component";
+import {ReservationDialogService} from "../reservation-dialog/reservation-dialog.service";
 
 @Component({
   selector: 'table-item-component',
@@ -15,11 +16,10 @@ import {LogoIconComponent} from "../../../shared/svg/logo-icon/logo-icon.compone
 export class TableComponent implements OnInit{
   @Input() tableInformation: TableInformation | undefined ;
 
+  private reservationDialogService = inject(ReservationDialogService)
+
   public tableState:'ЗАБРОНЮВАТИ' | 'ЗАБРОНЬОВАНО' = 'ЗАБРОНЮВАТИ';
   public iconState: string = '';
-
-  constructor() {
-  }
 
   ngOnInit() {
     this.setButtonLabel()
@@ -36,7 +36,7 @@ export class TableComponent implements OnInit{
   }
 
   public showReservationDialog() {
-
+    this.reservationDialogService.openDialog()
   }
 
 

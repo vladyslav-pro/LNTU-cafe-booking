@@ -23,6 +23,7 @@
       .mat-mdc-form-field {
       //TODO need to setup correct styles for mat-form-field or create custom
       }
+
     }
   }
 
@@ -59,3 +60,11 @@
   //  display: inline-block;
   //}
 }
+.cdk-overlay-dark-backdrop{
+  background-color: rgba(73, 19, 168, 0.55);
+}
+.cdk-overlay-pane {
+  border-radius: 45px !important;
+}
+
+
