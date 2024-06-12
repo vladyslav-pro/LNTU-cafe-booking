@@ -1,4 +1,4 @@
-import {Component, inject, Input, OnInit} from '@angular/core';
+import {Component, inject, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {UserReservationComponent} from "../../../shared/svg/user-reservation/user-reservation.component";
 import {MatButtonModule} from "@angular/material/button";

@@ -16,7 +16,7 @@
     <ul>
 <!--      @if (user === "ADMIN") {-->
         <li routerLinkActive="active" matBadge="4" [matBadgeOverlap]="badgeOverlap">
-          <a routerLink="/active-reservations">
+          <a routerLink="/active-reservation">
             <span>Активні бронювання</span>
             <mat-icon
               aria-hidden="false"
@@ -29,7 +29,7 @@
 
 <!--      @if (user === "USER" ) {-->
         <li routerLinkActive="active">
-          <a routerLink="/my-data">
+          <a routerLink="/user-data">
             <span>Мої дані</span>
             <mat-icon
               aria-hidden="false"
@@ -39,7 +39,7 @@
           </a>
         </li>
         <li routerLinkActive="active">
-          <a routerLink="/hall-map">
+          <a routerLink="/maps-of-table">
             <span>Карта залу</span>
             <mat-icon
               aria-hidden="false"
@@ -49,7 +49,7 @@
           </a>
         </li>
         <li routerLinkActive="active" matBadge="4" [matBadgeOverlap]="badgeOverlap">
-          <a routerLink="/my-reservations">
+          <a routerLink="/my-reservation">
             <span>Мої бронювання</span>
             <mat-icon
               aria-hidden="false"
@@ -60,7 +60,7 @@
         </li>
 
       <li routerLinkActive="active" [matBadge]="requestReservation" [matBadgeOverlap]="badgeOverlap">
-        <a routerLink="/request-reservations">
+        <a routerLink="/request-reservation">
           <span>Запити бронювання</span>
           <mat-icon
             aria-hidden="false"

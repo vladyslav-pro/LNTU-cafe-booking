@@ -12,12 +12,16 @@
         [disabled]="loginForm.invalid"
         class="login-page__button"
       >
-        <span>Вхід</span>
+<!--        <span>Вхід</span>-->
+        <a routerLink="main" routerLinkActive="active">Вхід</a>
         <logo-icon></logo-icon>
       </button>
     </form>
     <button mat-button class="login-page__button">
-      <span>Реєстрація</span>
+
+      <nav>
+            <a routerLink="registration" routerLinkActive="active">Реєстрація</a>
+      </nav>
       <logo-icon></logo-icon>
     </button>
   </div>

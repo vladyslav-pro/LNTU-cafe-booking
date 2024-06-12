@@ -9,6 +9,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {ActiveReservationComponent} from "./reservations/active-reservation/active-reservation.component";
 import {MyReservationComponent} from "./reservations/my-reservation/my-reservation.component";
 import {RequestReservationComponent} from "./reservations/request-reservation/request-reservation.component";
+import {RouterOutlet} from "@angular/router";
 
 @Component({
   standalone: true,
@@ -24,7 +25,8 @@ import {RequestReservationComponent} from "./reservations/request-reservation/re
     MatButtonModule,
     ActiveReservationComponent,
     MyReservationComponent,
-    RequestReservationComponent
+    RequestReservationComponent,
+    RouterOutlet
   ]
 })
 export class MainPageComponent {
