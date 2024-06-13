@@ -4,6 +4,7 @@ import {MatFormField} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {MatButton, MatButtonModule} from "@angular/material/button";
 import {LogoIconComponent} from "../../shared/svg/logo-icon/logo-icon.component";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'login-page',
@@ -12,7 +13,8 @@ import {LogoIconComponent} from "../../shared/svg/logo-icon/logo-icon.component"
     ReactiveFormsModule,
     MatButton,
     MatButtonModule,
-    LogoIconComponent
+    LogoIconComponent,
+    RouterLink
   ],
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.scss',

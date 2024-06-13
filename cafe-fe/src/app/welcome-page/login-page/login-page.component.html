@@ -9,18 +9,19 @@
       <button
         mat-button
         type="submit"
-        [disabled]="loginForm.invalid"
+
         class="login-page__button"
       >
 <!--        <span>Вхід</span>-->
-        <a routerLink="main" routerLinkActive="active">Вхід</a>
+        <!--        [disabled]="loginForm.invalid"-->
+        <a routerLink="/main" routerLinkActive="active">Вхід</a>
         <logo-icon></logo-icon>
       </button>
     </form>
     <button mat-button class="login-page__button">
 
       <nav>
-            <a routerLink="registration" routerLinkActive="active">Реєстрація</a>
+            <a routerLink="../registration" routerLinkActive="active">Реєстрація</a>
       </nav>
       <logo-icon></logo-icon>
     </button>

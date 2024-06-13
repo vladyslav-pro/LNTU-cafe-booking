@@ -1,8 +1,8 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, ViewEncapsulation} from '@angular/core';
 import {UserReservationComponent} from "../../../shared/svg/user-reservation/user-reservation.component";
 import {TableInformation} from "../../../shared/interfaces/table-interface";
 import {TitleCasePipe} from "@angular/common";
-import {MatButtonModule} from "@angular/material/button";
+import {MatButton, MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'reservation-item',
@@ -10,10 +10,12 @@ import {MatButtonModule} from "@angular/material/button";
   imports: [
     UserReservationComponent,
     TitleCasePipe,
-    MatButtonModule
+    MatButtonModule,
+    MatButton
   ],
   templateUrl: './reservation-item.component.html',
-  styleUrl: './reservation-item.component.scss'
+  styleUrl: './reservation-item.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class ReservationItemComponent {
   @Input() tableItem: TableInformation | undefined ;

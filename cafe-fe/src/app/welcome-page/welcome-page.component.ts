@@ -17,13 +17,13 @@ import {NavigationEnd, Router, RouterLink, RouterOutlet} from "@angular/router";
 })
 export class WelcomePageComponent {
 
-  constructor(private router: Router) {
-    this.router.events.subscribe(event => {
-      console.log(event);
-      if (event instanceof NavigationEnd) {
-        console.log(event);
-      }
-    });
-  }
+  // constructor(private router: Router) {
+  //   this.router.events.subscribe(event => {
+  //     console.log(event);
+  //     if (event instanceof NavigationEnd) {
+  //       console.log(event);
+  //     }
+  //   });
+  // }
 
 }
