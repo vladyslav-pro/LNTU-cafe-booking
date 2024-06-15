@@ -1,9 +1,8 @@
 import {Route, RouterModule, Routes} from '@angular/router';
 import {WelcomePageRoutingModule} from "./welcome-page/welcome-page.module";
-import {NgModule} from "@angular/core";
-
+import {MainPageRoutingModule} from "./main-page/main-page.module";
 export const appRoutes: Route[] = [
-  {path: '', redirectTo: '/welcome', pathMatch: 'full'},
+  {path: '', redirectTo: '/welcome/login', pathMatch: 'full'},
   {path: 'welcome',
     loadChildren: () => import('./welcome-page/welcome-page.module')
       .then(m => m.WelcomePageRoutingModule)
@@ -15,10 +14,3 @@ export const appRoutes: Route[] = [
   }
 ];
 
-// @NgModule({
-//   imports: [
-//     RouterModule.forRoot(appRoutes)
-//   ],
-//   exports: [RouterModule]
-// })
-// export class AppRoutingModule {}
