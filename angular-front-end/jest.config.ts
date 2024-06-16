@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'cafe-fe',
+  displayName: 'angular-front-end',
   preset: '../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../coverage/cafe-fe',
+  coverageDirectory: '../coverage/angular-front-end',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

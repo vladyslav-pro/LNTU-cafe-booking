@@ -1,23 +1,23 @@
 {
-  "name": "cafe-fe",
+  "name": "angular-front-end",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "cafe-fe/src",
+  "sourceRoot": "angular-front-end/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/cafe-fe/browser",
-        "index": "cafe-fe/src/index.html",
-        "main": "cafe-fe/src/main.ts",
+        "outputPath": "dist/angular-front-end/browser",
+        "index": "angular-front-end/src/index.html",
+        "main": "angular-front-end/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "cafe-fe/tsconfig.app.json",
+        "tsConfig": "angular-front-end/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["cafe-fe/src/favicon.ico", "cafe-fe/src/assets"],
-        "styles": ["cafe-fe/src/styles.scss"],
+        "assets": ["angular-front-end/src/favicon.ico", "angular-front-end/src/assets"],
+        "styles": ["angular-front-end/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -55,10 +55,10 @@
       },
       "configurations": {
         "production": {
-          "buildTarget": "cafe-fe:build:production"
+          "buildTarget": "angular-front-end:build:production"
         },
         "development": {
-          "buildTarget": "cafe-fe:build:development"
+          "buildTarget": "angular-front-end:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -66,7 +66,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "cafe-fe:build"
+        "buildTarget": "angular-front-end:build"
       }
     },
     "lint": {
@@ -76,16 +76,16 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "cafe-fe/jest.config.ts"
+        "jestConfig": "angular-front-end/jest.config.ts"
       }
     },
     "server": {
       "dependsOn": ["build"],
       "executor": "@angular-devkit/build-angular:server",
       "options": {
-        "outputPath": "dist/cafe-fe/server",
-        "main": "cafe-fe/server.ts",
-        "tsConfig": "cafe-fe/tsconfig.server.json",
+        "outputPath": "dist/angular-front-end/server",
+        "main": "angular-front-end/server.ts",
+        "tsConfig": "angular-front-end/tsconfig.server.json",
         "inlineStyleLanguage": "scss"
       },
       "configurations": {
@@ -106,12 +106,12 @@
       "executor": "@angular-devkit/build-angular:ssr-dev-server",
       "configurations": {
         "development": {
-          "browserTarget": "cafe-fe:build:development",
-          "serverTarget": "cafe-fe:server:development"
+          "browserTarget": "angular-front-end:build:development",
+          "serverTarget": "angular-front-end:server:development"
         },
         "production": {
-          "browserTarget": "cafe-fe:build:production",
-          "serverTarget": "cafe-fe:server:production"
+          "browserTarget": "angular-front-end:build:production",
+          "serverTarget": "angular-front-end:server:production"
         }
       },
       "defaultConfiguration": "development"
@@ -123,12 +123,12 @@
       },
       "configurations": {
         "development": {
-          "browserTarget": "cafe-fe:build:development",
-          "serverTarget": "cafe-fe:server:development"
+          "browserTarget": "angular-front-end:build:development",
+          "serverTarget": "angular-front-end:server:development"
         },
         "production": {
-          "browserTarget": "cafe-fe:build:production",
-          "serverTarget": "cafe-fe:server:production"
+          "browserTarget": "angular-front-end:build:production",
+          "serverTarget": "angular-front-end:server:production"
         }
       },
       "defaultConfiguration": "production"
