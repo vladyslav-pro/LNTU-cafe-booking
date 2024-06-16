@@ -11,7 +11,7 @@ import {ReservationItemComponent} from "../reservation-item/reservation-item.com
   ],
   templateUrl: './my-reservation.component.html',
   styleUrl: './my-reservation.component.scss',
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 export class MyReservationComponent implements OnInit{
   protected readonly tableList = TABLE_MOCK;

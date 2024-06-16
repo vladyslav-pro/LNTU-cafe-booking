@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {NgOptimizedImage} from "@angular/common";
-import {RouterLink} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 import {SideBarInformationComponent} from "./side-bar-information/side-bar-information.component";
 import {MatIcon} from "@angular/material/icon";
 import {MatBadgeModule} from "@angular/material/badge";
@@ -15,8 +15,16 @@ import {MatBadgeModule} from "@angular/material/badge";
 export class SideBarComponent {
   public badgeOverlap: boolean = true;
   public user!: 'ADMIN' | 'USER'
-  public requestReservation: number = 5;
+  public requestReservation: number = 2;
+  constructor(
+    private router: Router
+  ) {
 
+  }
+
+  logout() {
+    this.router.navigate(['/welcome/login']);
+  }
 }
 
 

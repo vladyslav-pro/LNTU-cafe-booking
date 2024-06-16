@@ -3,28 +3,29 @@
     <h1>Сторінка авторизації користувача</h1>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-page__form">
       <div class="login-page__form__input">
-        <input  placeholder="lntu.email@com" [formControlName]="'email'" type="email">
+        <input  placeholder="E-mail: lntu.email@com" [formControlName]="'email'" type="email">
         <input minlength="8" placeholder="type password" [formControlName]="'password'" type="password">
       </div>
-      <button
+      <a
         mat-button
         type="submit"
-
-        class="login-page__button"
+        [disabled]="loginForm.invalid"
+        routerLink="/main"
+        routerLinkActive="active"
+        [class]="loginForm.invalid ? 'login-page__button-disabled' : 'login-page__button'"
       >
-<!--        <span>Вхід</span>-->
-        <!--        [disabled]="loginForm.invalid"-->
-        <a routerLink="/main" routerLinkActive="active">Вхід</a>
+        <span >Вхід</span>
         <logo-icon></logo-icon>
-      </button>
+      </a>
     </form>
-    <button mat-button class="login-page__button">
-
-      <nav>
-            <a routerLink="../registration" routerLinkActive="active">Реєстрація</a>
-      </nav>
+    <a
+      mat-button
+      class="login-page__button"
+      routerLink="../registration"
+      routerLinkActive="active">
+       <span >Реєстрація</span>
       <logo-icon></logo-icon>
-    </button>
+    </a>
   </div>
 </div>
 

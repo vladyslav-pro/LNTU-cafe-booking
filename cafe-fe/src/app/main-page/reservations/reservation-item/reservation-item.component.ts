@@ -15,7 +15,7 @@ import {MatButton, MatButtonModule} from "@angular/material/button";
   ],
   templateUrl: './reservation-item.component.html',
   styleUrl: './reservation-item.component.scss',
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 export class ReservationItemComponent {
   @Input() tableItem: TableInformation | undefined ;

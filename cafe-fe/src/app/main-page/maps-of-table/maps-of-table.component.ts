@@ -27,6 +27,7 @@ import {MatInputModule} from "@angular/material/input";
 export class MapsOfTableComponent {
   // TODO add table filtering ask server about this I think
   public tableList:TableInformation[]  = TABLE_MOCK;
+
   public tableNumber:string ='';
 
   public getTableNumber(event: any) {
@@ -36,5 +37,6 @@ export class MapsOfTableComponent {
 
   public onSearchClean() {
     this.tableNumber = ''
+
   }
 }
